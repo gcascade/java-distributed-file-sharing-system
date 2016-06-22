@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sharingsystem" default="main" basedir=".">
+    <property name="project.sourcedirectory" value="src"/>
+    <property name="project.classdirectory" value="."/>
+    <property name="project.jardirectory" value="jar"/>
+    <target name="clean">
+        <delete dir="sharingsystem" />
+    </target>
+    <target name="compile">
+        <mkdir dir ="${project.classdirectory}"/>
+        <javac srcdir="${project.sourcedirectory}" 
+        destdir="${project.classdirectory}" 
+        nowarn = "on"
+        includeantruntime="false">
+        </javac>
+    </target>
+    <target name="main" depends="clean,compile">
+    </target>
+</project>
